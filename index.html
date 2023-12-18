@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Term Calculator</title>
+   <script type="text/javascript" src="calculator.js"></script>
+   <script type="text/javascript" src="largestAscendingNumber.js"></script>
+   
+</head>
+<body>
+    <h1>Term Calculator</h1>
+    <form id="calculatorForm">
+        <input type="text" id="expression" >
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("calculatorForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const expression = document.getElementById("expression").value;
+            const result = termCalculator(expression);
+            document.getElementById("result").innerText = "Result: " + result;
+        });
+    </script>
+	<h1>Largest Ascending Number</h1>
+    <form id="ascendingNumberForm">
+        <input type="text" id="numberInput" >
+        <button type="submit">Calculate</button>
+    </form>
+    <div id="resultascendingNumber"></div>
+
+    <script>
+        document.getElementById("ascendingNumberForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const numberInput = document.getElementById("numberInput").value;
+            const result = lastAscendingNumber(numberInput);
+            document.getElementById("resultascendingNumber").innerText = "Result: " + result;
+        });
+    </script>
+	
+	
+</body>
+</html>
